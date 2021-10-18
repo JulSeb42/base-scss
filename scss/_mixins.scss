@@ -16,11 +16,12 @@
 
 @mixin icon($icon, $size) {
     content: "";
-    background: url(/images/icons/#{$icon});
     width: $size;
     height: $size;
-    background-size: contain;
-    background-position: center;
+    mask: url("/images/icons/#{$icon}.svg") no-repeat 50% 50%;
+    mask-size: cover;
+    display: inline-block;
+    background-color: $color;
 }
 
 @mixin paMar() {
